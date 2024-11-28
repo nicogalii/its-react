@@ -27,23 +27,28 @@ const App = () => {
       });
   }, [page]);
 
-  const goToNextPage = () => {
-    if (page < totPages - 1) {
-      setPage(page + 1);
-    }
-  };
   const goToPreviousPage = () => {
     if (page > 0) {
       setPage(page - 1);
     }
   };
 
-  //
-  const hasPreviousPage = (): boolean => {
-    return true;
+  const goToNextPage = () => {
+    if (page < totPages - 1) {
+      setPage(page + 1);
+    }
   };
-  const hasNextPage = (): boolean => {
-    return true;
+
+  const hasPreviousPage = () => {
+    if (page === 0) {
+      return true;
+    }
+  };
+
+  const hasNextPage = () => {
+    if (page === totPages - 1) {
+      return true;
+    }
   };
 
   return (
