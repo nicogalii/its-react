@@ -6,7 +6,7 @@ function App() {
   const [lap, setLap] = useState(0);
 
   // Array di numeri inizializzato come un array vuoto
-  const [time, setTime] = useState<number[]>([]);
+  const [countTime, setCountTime] = useState<number[]>([]);
 
   /**
    * Funzione per incrementare il valore del contatore 'count' di 1
@@ -29,7 +29,7 @@ function App() {
    * Funzione per aggiungere all'array 'time' la data corrente
    */
   function addArray() {
-    setTime([...time, Date.now()]);
+    setCountTime([...countTime, Date.now()]);
   }
 
   return (
@@ -50,7 +50,7 @@ function App() {
 
       {/* Lista con le date dei click dei click */}
       <ul>
-        {time.map((currentTime, index) => {
+        {countTime.map((currentTime, index) => {
           return <li key={index}>{new Date(currentTime).toLocaleString()}</li>;
         })}
       </ul>
