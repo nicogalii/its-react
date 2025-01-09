@@ -1,4 +1,5 @@
 import useEquipmentApi from "../hooks/useEquipmentApi";
+import "../component/styles/EquipmentList.css";
 
 // Funzione per l'interfaccia per i dati delle attrezzature
 const EquipmentList = () => {
@@ -7,13 +8,20 @@ const EquipmentList = () => {
 
   return (
     // Lista delle attrezzature
-    <div>
+    <div className="container-box">
       {EquipmentListResult.map((equipment, index) => (
-        <div key={index}>
+        <div key={index} className="container">
           <h2>{equipment.name}</h2>
           <p>{equipment.claim}</p>
           <img src={equipment.image} alt={equipment.name} />
-          <p>{equipment.pricePerMinute}</p>
+          <p>{equipment.pricePerMinute.toFixed(2)}€</p>
+          <button
+            onClick={() => {
+              console.log("funziona!");
+            }}
+          >
+            Prenota
+          </button>
         </div>
       ))}
     </div>

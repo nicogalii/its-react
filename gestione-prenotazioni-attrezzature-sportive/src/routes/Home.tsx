@@ -1,10 +1,13 @@
 import EquipmentList from "../component/EquipmentList";
+import Header from "../component/Header";
+import "../routes/styles/Home.css";
 
 // Componente che rappresenta la pagina principale dell'applicazione
 const Home = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <Header />
+      <h1>Gym Equipment</h1>
 
       {/* Componente che mostra una lista di attrezzature */}
       <EquipmentList />
