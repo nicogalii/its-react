@@ -1,5 +1,5 @@
-import useEquipmentApi from "../hooks/useEquipmentApi";
-import "../component/styles/EquipmentList.css";
+import useEquipmentApi from "../../hooks/useEquipmentApi";
+import "./EquipmentList.css";
 
 // Funzione per l'interfaccia per i dati delle attrezzature
 const EquipmentList = () => {
@@ -17,7 +17,7 @@ const EquipmentList = () => {
           <p>{equipment.pricePerMinute.toFixed(2)}€</p>
           <button
             onClick={() => {
-              console.log("funziona!");
+              alert("funziona!");
             }}
           >
             Prenota

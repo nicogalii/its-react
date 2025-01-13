@@ -1,9 +1,9 @@
 // Definizione dei tipi per l'API delle attrezzature
-type EquipmentResult = {
+export interface EquipmentCard {
   id: number;
   name: string;
   claim: string;
   icon: string;
   image: string;
   pricePerMinute: number;
-};
+}
