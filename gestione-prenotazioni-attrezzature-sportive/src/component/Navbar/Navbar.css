@@ -1,11 +1,45 @@
 header {
-  background-color: red;
-  color: white;
-  padding: 10px;
+  width: 100vw;
+  height: 10vh;
+  background-color: #272727;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-p {
-  display: inline-block;
+header nav,
+header img {
+  width: 45px;
+  height: 45px;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+.nav-mobile,
+.check {
+  display: none;
+}
+
+.check:checked ~ .nav-mobile {
+  display: block;
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  background: #272727;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+}
+.nav-mobile a {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: block;
+  text-decoration: none;
 }

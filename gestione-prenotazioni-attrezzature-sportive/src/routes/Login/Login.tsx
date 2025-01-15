@@ -15,7 +15,7 @@ const Login = () => {
         <Link to="/register">Non hai un account? Registrati</Link>
       </form>
     </div>
-  );
+  ); 
 };
 
 export default Login;
