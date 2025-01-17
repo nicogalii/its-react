@@ -1,3 +1,4 @@
+import Hero from "../../component/Hero/Hero";
 import Main from "../../component/Main/Main";
 import "./Home.css";
 
@@ -5,10 +6,9 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      
-      <main>
-        <Main />
-      </main>
+      <Hero />
+      <h2>aidbai</h2>
+      <Main />
     </div>
   );
 };

@@ -1,12 +1,13 @@
-import EquipmentList from "../Equipment/EquipmentList";
+import Equipment from "../Equipment/Equipment";
 import "./Main.css";
 
 const Main = () => {
   return (
     <div>
-      <h1>Gym Equipment</h1>
-      {/* Componente che mostra una lista di attrezzature */}
-      <EquipmentList />
+      <main>
+        {/* Componente che mostra una lista di attrezzature */}
+        <Equipment />
+      </main>
     </div>
   );
 };

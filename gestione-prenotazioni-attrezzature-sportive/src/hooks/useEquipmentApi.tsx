@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import EquipmentListApi from "../service/EquipmentList.api";
-import { EquipmentCard } from "./useEquipmentApi.types";
+import { EquipmentCard } from "../models/equipmentApi.model";
 
 // Funzione per l'interfaccia per i dati delle attrezzature
 const useEquipmentApi = () => {

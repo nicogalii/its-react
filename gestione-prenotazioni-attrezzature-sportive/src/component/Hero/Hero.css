@@ -1,0 +1,52 @@
+.hero {
+  position: relative; /* Per posizionare correttamente il pseudo-elemento */
+  background-image: url("../../../assets/images/hero.jpg");
+  background-size: cover; /* L'immagine copre l'intera area del contenitore */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat;
+  height: 90vh;
+  margin: 10vh 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Impedisce che il contenuto esca */
+}
+
+.hero::after {
+  content: ""; /* Aggiunge un overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+h1 {
+  color: #f4f4f4;
+  z-index: 2;
+}
+
+.container-hero img {
+  position: absolute;
+  z-index: 2;
+  bottom: 35px;
+  left: 50%;
+  height: 30px;
+  width: auto;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 1;
+  }
+}

@@ -5,31 +5,30 @@ const Navbar = () => {
     <>
       <header>
         <div className="logo">
-          {/* <img src="./assets/images/logo.svg" alt="Logo di ..." /> */}
-          <p>ciao</p>
+          <img src="./assets/images/logo.svg" alt="Logo di ..." />
         </div>
         <nav>
-          <input type="checkbox" id="check" />
+          {/* <input type="checkbox" id="check" />
           <label htmlFor="check" className="checkbtn">
             <img
               src="./assets/svg/hamburger.svg"
               alt="Menu di navigazione"
               id="hamburger"
             />
-          </label>
-          <div className="nav-mobile">
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/equipment-booked">Equipment Booked</a>
-              </li>
-              <li>
-                <a href="/login">Login o Registrazione</a>
-              </li>
-            </ul>
-          </div>
+          </label> */}
+          {/* <div className="nav-mobile"> */}
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/equipment-booked">Equipment Booked</a>
+            </li>
+            <li>
+              <a href="/login">Login o Registrazione</a>
+            </li>
+          </ul>
+          {/* </div> */}
         </nav>
       </header>
     </>
