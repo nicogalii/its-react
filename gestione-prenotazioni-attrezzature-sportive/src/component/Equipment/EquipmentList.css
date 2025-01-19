@@ -10,7 +10,6 @@
   background-color: #f4f4f4;
   width: 100%;
   height: auto;
-  border-radius: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,7 +21,6 @@
 img {
   width: 50%;
   height: 100%;
-  border-radius: 5px 10px 10px 5px;
   object-fit: cover;
 }
 
@@ -58,7 +56,6 @@ button {
   background-color: #000;
   color: #f4f4f4;
   border: none;
-  border-radius: 5px 5px 5px 10px;
   cursor: pointer;
   margin: 10px 0 0;
 }

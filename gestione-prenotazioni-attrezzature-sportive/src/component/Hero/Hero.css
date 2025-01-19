@@ -1,19 +1,20 @@
 .hero {
-  position: relative; /* Per posizionare correttamente il pseudo-elemento */
+  position: relative;
   background-image: url("../../../assets/images/hero.jpg");
-  background-size: cover; /* L'immagine copre l'intera area del contenitore */
-  background-position: center; /* Centra l'immagine */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 90vh;
   margin: 10vh 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Impedisce che il contenuto esca */
+  overflow: hidden;
 }
 
+/* Semi-trasparente nero sopra l'immagine dello sfondo per scurirla */
 .hero::after {
-  content: ""; /* Aggiunge un overlay */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
