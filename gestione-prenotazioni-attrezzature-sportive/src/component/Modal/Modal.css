@@ -1,0 +1,92 @@
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  width: 70%;
+  /* box-shadow: 0px 5px 5px #ccc; */
+}
+
+.btn {
+  border: none;
+  color: #f4f4f4;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.btn-submit {
+  background-color: green;
+}
+
+.btn-cancel {
+  background-color: red;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  width: 100%;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+label {
+  padding-top: 20px;
+}
+
+.duration-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 45px;
+  padding: 10px 0;
+}
+
+.duration-box button {
+  margin: 0;
+  height: 100%;
+  width: 45px;
+  border-radius: 50px;
+}
+
+.duration-box input {
+  height: 100%;
+  padding: 0;
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 40%;
+}

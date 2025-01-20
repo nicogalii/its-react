@@ -3,6 +3,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  padding: 0 15px;
+  position: relative;
 }
 
 .container {
@@ -24,7 +26,7 @@ img {
   object-fit: cover;
 }
 
-/** DA CAPIRE SE INSERIRLO O NO */
+/*? DA CAPIRE SE INSERIRLO O NO */
 /* img:hover {
   width: 60%;
   z-index: 10;
