@@ -4,10 +4,9 @@ import { useState } from "react";
 import { EquipmentCard } from "../../models/equipmentApi.model";
 import Modal from "../Modal/Modal";
 
-// Funzione per l'interfaccia per i dati delle attrezzature
 const EquipmentList = () => {
-  // Chiamata all'API remota per ottenere la lista delle attrezzature
-  const EquipmentListResult = useEquipmentApi(); // Nome variabile reso più leggibile
+  // Chiamata all'API la lista delle attrezzature
+  const EquipmentListResult = useEquipmentApi();
   const [equipmentDetail, setEquipmentDetail] = useState<null | EquipmentCard>(
     null
   );

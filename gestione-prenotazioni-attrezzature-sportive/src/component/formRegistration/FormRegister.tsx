@@ -19,6 +19,7 @@ const FormRegister = () => {
     <>
       <form onSubmit={handleSubmit}>
         <h2>Register</h2>
+        {/* Campo input per inserire l'username */}
         <label htmlFor="username">Username:</label>
         <input
           type="text"
@@ -28,6 +29,7 @@ const FormRegister = () => {
           required
         />
 
+        {/* Campo input per inserire la password */}
         <label htmlFor="password">Password:</label>
         <input
           type="password"

@@ -2,10 +2,9 @@ import "../EquipmentList/EquipmentList.css";
 
 import useEquipmentBookedApi from "../../hooks/useEquipmentBookedApi";
 
-// Funzione per l'interfaccia per i dati delle attrezzature
 const EquipmentBookedList = () => {
-  // Chiamata all'API remota per ottenere la lista delle attrezzature
-  const EquipmentBookedResult = useEquipmentBookedApi(); // Nome variabile reso più leggibile
+  // Chiamata all'API per ottenere la lista delle attrezzature prenotate
+  const EquipmentBookedResult = useEquipmentBookedApi();
 
   return (
     // Lista delle attrezzature

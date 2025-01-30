@@ -8,11 +8,11 @@ const FormLogin = () => {
   const { login } = useLoginApi();
   const navigate = useNavigate();
 
-  // Funzione per gestire il submit del form
+  // Funzione per gestire il 'book now' del form
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Esegui il login tramite il custom hook
+    // Eseguzione del login tramite il custom hook
     await login(username, password);
     navigate("/");
   };
@@ -42,10 +42,8 @@ const FormLogin = () => {
         required
       />
 
-      {/* Bottone per effettuare il login */}
       <button type="submit">Login</button>
 
-      {/* Link per la registrazione */}
       <p>
         Don't have an account? <Link to="/register">Register</Link>
       </p>
