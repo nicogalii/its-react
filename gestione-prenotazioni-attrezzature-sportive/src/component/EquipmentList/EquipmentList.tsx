@@ -27,6 +27,7 @@ const EquipmentList = () => {
             <div className="container-info">
               <h3>{equipment.name}</h3>
               <p>{equipment.claim}</p>
+              <div dangerouslySetInnerHTML={{ __html: equipment.icon }} />
               <p>
                 <span>{equipment.pricePerMinute.toFixed(2)}€</span> / min
               </p>
@@ -37,7 +38,7 @@ const EquipmentList = () => {
                   setModalOpen(true);
                 }}
               >
-                Prenota
+                Book
               </button>
             </div>
             <img src={equipment.image} alt={equipment.name} />

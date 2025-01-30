@@ -58,7 +58,7 @@ const Modal = ({ onClose, onSubmit, equipment }: EquipmentProps) => {
                 console.log("click");
               }}
             >
-              Submit
+              Book Now
             </button>
             <button className="btn btn-close" onClick={() => onClose()}>
               Close

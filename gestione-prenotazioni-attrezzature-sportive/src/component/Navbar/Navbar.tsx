@@ -67,7 +67,7 @@ const Navbar = () => {
                 {!token && (
                   <li>
                     <NavLink to="/login" onClick={() => setOpenMenu(false)}>
-                      Login o Registrazione
+                      Login / Register
                     </NavLink>
                   </li>
                 )}
