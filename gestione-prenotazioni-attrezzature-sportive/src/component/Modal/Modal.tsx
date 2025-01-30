@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { EquipmentCard } from "../../models/equipmentApi.model";
-import useEquipmentDetailApi from "../../hooks/useBookingDurationApi";
+import useBookingDurationApi from "../../hooks/useBookingDurationApi";
 import "./Modal.css";
+import { useNavigate } from "react-router";
 
 type EquipmentProps = {
   equipment: EquipmentCard;
@@ -11,7 +12,8 @@ type EquipmentProps = {
 
 const Modal = ({ onClose, onSubmit, equipment }: EquipmentProps) => {
   const [duration, setDuration] = useState<number>(5);
-  useEquipmentDetailApi(equipment.id, duration);
+  useBookingDurationApi(equipment.id, duration);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -37,6 +39,7 @@ const Modal = ({ onClose, onSubmit, equipment }: EquipmentProps) => {
                 id="duration"
                 value={duration}
                 onChange={(e) => setDuration(Number(e.target.value))}
+                readOnly
               />
               <button
                 onClick={() => {
@@ -55,7 +58,7 @@ const Modal = ({ onClose, onSubmit, equipment }: EquipmentProps) => {
               className="btn btn-submit"
               onClick={() => {
                 onSubmit(duration);
-                console.log("click");
+                navigate("/equipment-booked");
               }}
             >
               Book Now

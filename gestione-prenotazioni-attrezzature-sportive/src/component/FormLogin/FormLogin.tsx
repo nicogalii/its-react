@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import useLoginApi from "../../hooks/useLoginApi";
 
 const FormLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useLoginApi();
-  const navigate = useNavigate();
+  const { login, error } = useLoginApi();
 
   // Funzione per gestire il 'book now' del form
   const handleSubmit = async (e: React.FormEvent) => {
@@ -14,7 +13,6 @@ const FormLogin = () => {
 
     // Eseguzione del login tramite il custom hook
     await login(username, password);
-    navigate("/");
   };
 
   return (
@@ -41,6 +39,7 @@ const FormLogin = () => {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
+      <div className="error">{error ?? <p>{error}</p>}</div>
 
       <button type="submit">Login</button>
 

@@ -25,7 +25,7 @@ header {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: none;
+  background-color: #000;
 }
 
 /* Menu Mobile */
@@ -48,11 +48,11 @@ header {
   list-style: none;
   padding: 0;
   text-align: center;
-  /* margin-top: 10vh; */
-  /* display: flex;
+  margin-top: 10vh;
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center; */
+  align-items: center;
 }
 
 .menu-mobile li {
@@ -69,16 +69,21 @@ header {
   cursor: pointer;
   margin: 0;
 }
-button {
-  margin: 0;
-  padding: 0;
+
+.auth-btn {
+  border: 1px solid rgb(255, 132, 0);
+  padding: 10px;
+  font-weight: 300;
 }
 
 /* Menu Desktop */
 .menu-desktop {
   display: none;
 }
-
+button img {
+  height: 50px;
+  width: 50px;
+}
 /* Media Query */
 @media (min-width: 900px) {
   .hamburger-btn {
@@ -90,27 +95,26 @@ button {
   }
 
   .menu-desktop {
-    display: flex;
+    display: block;
   }
 
   .menu-desktop ul {
     display: flex;
     gap: 2rem;
     list-style: none;
-  }
-
-  .menu-desktop li {
-    display: inline-block;
+    align-items: center;
   }
 
   .menu-desktop a,
   .menu-desktop button {
-    color: white;
+    color: #f4f4f4;
     text-decoration: none;
     font-size: 1.2rem;
     border: none;
     background: none;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
   }
 
   .menu-desktop button:hover,

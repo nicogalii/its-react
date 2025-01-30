@@ -1,23 +1,21 @@
+import { useState } from "react";
 import registerApi from "../service/Register.api.";
 
 const useRegisterApi = () => {
+  const [error, setError] = useState<string | null>(null);
   // Funzione per la registrazione
   const register = async (username: string, password: string) => {
     try {
       const data = await registerApi(username, password);
 
-      if (data && data.token) {
-        localStorage.setItem("token", data.token);
-      } else {
-        throw new Error("Registrazione fallita, token non ricevuto.");
-      }
+      // Verifica se ce un token e lo salva nel localStorage
+      localStorage.setItem("token", data.token);
     } catch (err) {
-      console.error("Errore durante la registrazione.");
+      setError(err.message);
     }
   };
 
-
-  return { register };
+  return { register, error };
 };
 
 export default useRegisterApi;

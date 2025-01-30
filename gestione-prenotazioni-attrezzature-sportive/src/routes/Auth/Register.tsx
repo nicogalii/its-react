@@ -4,9 +4,9 @@ import "./authForm.css";
 const Register = () => {
   return (
     <>
-      <main>
+      <div className="center-container">
         <FormRegister />
-      </main>
+      </div>
     </>
   );
 };

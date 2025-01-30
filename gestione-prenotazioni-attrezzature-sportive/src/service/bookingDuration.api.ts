@@ -1,8 +1,7 @@
-// Funzione per inserire la durata della prenotazione
+// Funzione per inviare la durata della prenotazione di un'attrezzatura
 const bookingDurationApi = async (id: number, duration: number) => {
-  // Chiamata all'API remota
   const res = await fetch(
-    // URL dell'API remota
+    // URL dell'API per salvare la durata della prenotazione
     `https://d3660g9kardf5b.cloudfront.net/api/equipment/${id}/book`,
     {
       method: "POST",

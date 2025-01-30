@@ -1,8 +1,7 @@
 // Funzione per inserire i dati del login
 const loginApi = async (username: string, password: string) => {
-  // Chiamata all'API remota
   const res = await fetch(
-    // URL dell'API remota
+    // URL dell'API per il login
     `https://d3660g9kardf5b.cloudfront.net/api/login`,
     {
       method: "POST",
@@ -12,6 +11,10 @@ const loginApi = async (username: string, password: string) => {
       body: JSON.stringify({ username, password }),
     }
   );
+
+  if (!res.ok) {
+    throw new Error(`Errore durante il login.`);
+  }
 
   const data = await res.json();
 

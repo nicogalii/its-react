@@ -18,14 +18,16 @@ const Navbar = () => {
   const handleLogout = () => {
     logout();
     setToken(null);
-    navigate("/login");
+    {
+      navigate("/login");
+    }
   };
 
   return (
     <>
       <header>
         {/* Logo */}
-        <NavLink to="/" className="logo">
+        <NavLink to="/" onClick={() => setOpenMenu(false)} className="logo">
           <img
             src="../../../assets/images/logo.svg"
             alt="Logo di elite equipment"
@@ -60,12 +62,14 @@ const Navbar = () => {
 
                 {token && (
                   <li>
-                    <button onClick={handleLogout}>Logout</button>
+                    <button onClick={handleLogout}>
+                      <img src="/assets/images/logout.svg" alt="logout" />
+                    </button>
                   </li>
                 )}
 
                 {!token && (
-                  <li>
+                  <li className={"auth-btn"}>
                     <NavLink to="/login" onClick={() => setOpenMenu(false)}>
                       Login / Register
                     </NavLink>
@@ -86,13 +90,15 @@ const Navbar = () => {
             </li>
             {token && (
               <li>
-                <button onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout}>
+                  <img src="/assets/images/logout.svg" alt="logout" />
+                </button>
               </li>
             )}
 
             {!token && (
-              <li>
-                <NavLink to="/login">Login o Registrazione</NavLink>
+              <li className={"auth-btn"}>
+                <NavLink to="/login">Login / Register</NavLink>
               </li>
             )}
           </ul>

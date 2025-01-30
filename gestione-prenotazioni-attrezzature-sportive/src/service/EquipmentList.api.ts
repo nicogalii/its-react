@@ -1,13 +1,12 @@
-// Funzione per ottenere la lista delle attrezzature 
+// Funzione per ottenere la lista delle attrezzature
 const equipmentListApi = async () => {
-  // Chiamata all'API remota
   const res = await fetch(
-    // URL dell'API remota
+    // URL dell'API per ottenere le  attrezzature
     "https://d3660g9kardf5b.cloudfront.net/api/equipment"
   );
-  // Estrazione dei dati dalla risposta
+
   const data = await res.json();
-  // Ritorno dei dati estratti
+
   return data;
 };
 

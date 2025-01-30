@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import useRegister from "../../hooks/useRegisterApi";
+import useRegisterApi from "../../hooks/useRegisterApi";
 
 const FormRegister = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { register } = useRegister();
+  const { register, error } = useRegisterApi();
   const navigate = useNavigate();
   2;
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,7 +38,7 @@ const FormRegister = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-
+        {error ?? <p>{error}</p>}
         <button type="submit">Register</button>
 
         <p>

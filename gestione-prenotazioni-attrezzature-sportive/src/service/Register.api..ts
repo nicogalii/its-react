@@ -1,8 +1,7 @@
 // Funzione per inserire i dati della registrazione
 const registerApi = async (username: string, password: string) => {
-  // Chiamata all'API remota
   const res = await fetch(
-    // URL dell'API remota
+    // URL dell'API per la registrazione
     `https://d3660g9kardf5b.cloudfront.net/api/register`,
     {
       method: "POST",
@@ -12,6 +11,10 @@ const registerApi = async (username: string, password: string) => {
       body: JSON.stringify({ username, password }),
     }
   );
+
+  if (!res.ok) {
+    throw new Error(`Errore durante la registrazione.`);
+  }
 
   const data = await res.json();
 

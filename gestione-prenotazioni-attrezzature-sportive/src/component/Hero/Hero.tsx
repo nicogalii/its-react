@@ -1,13 +1,12 @@
 import "./Hero.css";
-import "../../../assets/images/hero.jpg";
+import "/assets/images/hero.jpg";
 const Hero = () => {
-  
   return (
     <div className="container-hero">
       <div className="hero">
         <h1>Elite Equipment</h1>
       </div>
-      <img src="../../../assets/images/scroll.svg" alt="" />
+      <img src="/assets/images/scroll.svg" alt="" />
     </div>
   );
 };

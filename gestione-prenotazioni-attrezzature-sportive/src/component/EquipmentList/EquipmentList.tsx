@@ -26,7 +26,11 @@ const EquipmentList = () => {
             <div className="container-info">
               <h3>{equipment.name}</h3>
               <p>{equipment.claim}</p>
-              <div dangerouslySetInnerHTML={{ __html: equipment.icon }} />
+              <svg
+                dangerouslySetInnerHTML={{ __html: equipment.icon }}
+                width={30}
+                height={30}
+              />
               <p>
                 <span>{equipment.pricePerMinute.toFixed(2)}€</span> / min
               </p>

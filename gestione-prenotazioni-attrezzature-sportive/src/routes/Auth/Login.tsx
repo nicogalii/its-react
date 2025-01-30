@@ -4,9 +4,9 @@ import "./authForm.css";
 const Login = () => {
   return (
     <>
-      <main>
+      <div className="center-container">
         <FormLogin />
-      </main>
+      </div>
     </>
   );
 };

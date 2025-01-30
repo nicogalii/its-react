@@ -1,6 +1,6 @@
-// Funzione per ottenere la lista delle attrezzature prenotate
+// Funzione per ottenere le attrezzature prenotate
 const equipmentBookedApi = async () => {
-  // Chiamata all'API remota
+  // Chiamata all'API per avere le attrezzature prenotate
   const res = await fetch(
     "https://d3660g9kardf5b.cloudfront.net/api/equipment-bookings",
     {
