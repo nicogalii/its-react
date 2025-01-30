@@ -1,4 +1,4 @@
-import EquipmentList from "../../component/Equipment/Equipment";
+import EquipmentList from "../../component/EquipmentList/EquipmentList";
 import Hero from "../../component/Hero/Hero";
 import "./Home.css";
 

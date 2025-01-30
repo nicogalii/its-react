@@ -1,5 +1,5 @@
 import FormLogin from "../../component/FormLogin/FormLogin";
-import "./Login.css";
+import "./authForm.css";
 
 const Login = () => {
   return (

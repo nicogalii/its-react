@@ -17,8 +17,6 @@ const EquipmentList = () => {
     setModalOpen(false);
   };
 
-
-
   return (
     // Lista delle attrezzature
     <>
@@ -32,7 +30,7 @@ const EquipmentList = () => {
               <p>
                 <span>{equipment.pricePerMinute.toFixed(2)}€</span> / min
               </p>
-             
+
               <button
                 onClick={() => {
                   setEquipmentDetail(equipment);
@@ -48,7 +46,6 @@ const EquipmentList = () => {
         {equipmentDetail && modalOpen && (
           <Modal
             onSubmit={bottomClick}
-            onCancel={bottomClick}
             onClose={bottomClick}
             equipment={equipmentDetail}
           />

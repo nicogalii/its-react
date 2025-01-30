@@ -1,30 +1,23 @@
 import { useEffect, useState } from "react";
-import EquipmentListApi from "../service/EquipmentList.api";
+import equipmentListApi from "../service/EquipmentList.api";
 import { EquipmentCard } from "../models/equipmentApi.model";
 
-// Funzione per l'interfaccia per i dati delle attrezzature
 const useEquipmentApi = () => {
   // Stato per la lista delle attrezzature
-  const [EquipmentList, setEquipmentList] = useState<EquipmentCard[]>([]);
+  const [equipmentList, setEquipmentList] = useState<EquipmentCard[]>([]);
 
-  // Chiamata all'API remota per ottenere la lista delle attrezzature
   useEffect(() => {
-    // Chiamata all'API remota
-    EquipmentListApi()
-      // Estrazione dei dati dalla risposta
-      .then((data: EquipmentCard[]) => {
-        // Stampa dei dati estratti
-        console.log(data);
-        // Salvataggio dei dati estratti nello stato
-        setEquipmentList(data);
+    equipmentListApi()
+      .then((result) => {
+        console.log(result); 
+        setEquipmentList(result); 
       })
-      // Gestione degli errori
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.error("Errore durante la richiesta API:", err);
       });
-  }, []);
+  }, []); // Effettua la chiamata solo al primo render
 
-  return EquipmentList;
+  return equipmentList;
 };
 
 export default useEquipmentApi;

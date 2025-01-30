@@ -1,4 +1,4 @@
-// Funzione per ottenere la lista delle attrezzature da un'API remota
+// Funzione per ottenere la lista delle attrezzature 
 const equipmentListApi = async () => {
   // Chiamata all'API remota
   const res = await fetch(

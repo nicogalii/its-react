@@ -1,7 +1,7 @@
 import "./Hero.css";
 import "../../../assets/images/hero.jpg";
 const Hero = () => {
-  // const heroBackground =
+  
   return (
     <div className="container-hero">
       <div className="hero">
