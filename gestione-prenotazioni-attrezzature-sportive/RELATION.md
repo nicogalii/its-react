@@ -4,18 +4,18 @@
 
 ### Struttura
 
-**Home**: Qui troviamo la lista delle attrezzature della palestra con ognuno un pulsante per aprire una **modale** dove inserire la durata della prenotazione e confermare la prenotazione.
-**Equipment Booked**: Qui appare la lista degli attrezzi prenotati.
-**Login/Register**: Qui si ha la possibilità di registrarsi e/o di accedere per avere le proprie prenotazioni personali.
+**Home**: Viene mostrata la lista delle attrezzature della palestra con ognuno un pulsante per aprire una **modale** dove inserire la durata della prenotazione e confermare la prenotazione.
+**Equipment Booked**: Viene mostrata la lista degli attrezzi prenotati.
+**Login/Register**: L'utente ha la possibilità di registrarsi e/o di accedere per avere le proprie prenotazioni personali.
 
 ### Hook
 
-**useEquipmentListApi**: Salva la lista delle attrezzature all'interno dello stato
-**useBookingDurationApi**: Salva la durata della prenotazione ogni volta che 'duration' e 'id' cambiano
-**useEquipmentBookedApi**: Salva la lista delle attrezzature prenotate
-**useLoginApi**: **login** -> Salva il token nel localStorage
-                **logout** -> Rimuove il token dal localStorage
-**useRegisterApi**:
+**useEquipmentListApi**: Recupera e salva la lista delle attrezzature all'interno dello stato
+**useBookingDurationApi**: Aggiorna e salva la durata della prenotazione ogni volta che 'duration' e 'id' cambiano
+**useEquipmentBookedApi**: Recupera e alva la lista delle attrezzature prenotate
+**useLoginApi**: Gestisce il 'login', che salva il token, il ì, che rimuove il token, nel localStorage.
+Gestisce anche il 'getToken' che restituisce il token salvato se è presente
+**useRegisterApi**: Gestisce la registrazione e salva il token nel localStorage.
 
 ### Service
 
@@ -28,7 +28,7 @@
 ### UI
 
 Ho progettato l'inerfaccia evitando un design morbido che potrebbe suggerire pigrizia.
-Per quanto riguarda la palette ho scelto il nero e il bianco per avere un aspetto moderno.
+Per quanto riguarda la palette ho scelto il nero e il bianco, per avere un aspetto moderno, e infine l'arancione per ispirare forza.
 
 #### Installazione dell'icona per il menu-mobile
 

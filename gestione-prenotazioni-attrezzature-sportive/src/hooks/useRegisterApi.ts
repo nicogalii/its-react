@@ -1,5 +1,5 @@
 import { useState } from "react";
-import registerApi from "../service/Register.api.";
+import registerApi from "../service/Register.api";
 
 const useRegisterApi = () => {
   const [error, setError] = useState<string | null>(null);

@@ -1,11 +1,10 @@
-import { NavLink, useNavigate } from "react-router";
+import { NavLink } from "react-router";
 import "./Navbar.css";
 import useLoginApi from "../../hooks/useLoginApi";
 import { useEffect, useState } from "react";
 import Hamburger from "hamburger-react";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const { logout, getToken } = useLoginApi();
   const [token, setToken] = useState(getToken());
   const [openMenu, setOpenMenu] = useState(false);
@@ -17,10 +16,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logout();
-    setToken(null);
-    {
-      navigate("/login");
-    }
+    setOpenMenu(false);
   };
 
   return (
@@ -28,10 +24,7 @@ const Navbar = () => {
       <header>
         {/* Logo */}
         <NavLink to="/" onClick={() => setOpenMenu(false)} className="logo">
-          <img
-            src="../../../assets/images/logo.svg"
-            alt="Logo di elite equipment"
-          />
+          <img src="/assets/images/logo.svg" alt="Logo di elite equipment" />
         </NavLink>
 
         <button className="hamburger-btn">
